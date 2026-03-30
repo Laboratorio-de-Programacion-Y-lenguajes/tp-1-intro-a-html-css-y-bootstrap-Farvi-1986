@@ -10,11 +10,30 @@
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+    
+   <!-- Agregacion 3 botones en el NAV -->
     <!-- Navbar (COMPLETAR: agregar logo, links activos, menú colapsable) -->
     <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Mi Blog</a>
-            <!-- TODO: agregar toggler y nav-items -->
+            <a class="navbar-brand fw-bold" href="index.html">Fabri Blog</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -29,21 +48,46 @@
     <!-- Main: listado de artículos -->
     <main class="py-5">
         <div class="container">
-            <h2 class="mb-4">Artículos Recientes</h2>
+            <h2 class="mb-4">Blogs?!</h2>
 
             <!-- Grid de tarjetas (COMPLETAR: 3+ artículos) -->
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="assets/images/article-1.jpg" class="card-img-top" alt="Artículo 1">
+                        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=500" class="card-img-top" alt="Programación">
                         <div class="card-body">
-                            <h5 class="card-title">Primer Artículo</h5>
-                            <p class="card-text text-muted">Autor: Tu Nombre</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <h5 class="card-title">Caminatas</h5>
+                            <p class="card-text text-muted">Autor: Fabri</p>
+                            <p class="card-text">Lugares recomendados para salir a caminar.</p>
                             <a href="#" class="btn btn-primary btn-sm">Leer más</a>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500" class="card-img-top" alt="Laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">Comida</h5>
+                            <p class="card-text text-muted">Autor: Fabri</p>
+                            <p class="card-text">Comidas recomendadas por mi jeje.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500" class="card-img-top" alt="Código">
+                        <div class="card-body">
+                            <h5 class="card-title">Autos</h5>
+                            <p class="card-text text-muted">Autor: Fabri</p>
+                            <p class="card-text">Autos divertidos de manejar</p>
+                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <!-- TODO: agregar 2 más -->
             </div>
         </div>
