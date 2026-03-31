@@ -1,68 +1,74 @@
-/* Config  */
+/* --- CONFIGURACIÓN GENERAL --- */
 :root {
-    --color-fondo: #609599;
-    --color-blanco: #ffffff;
-    --color-primario: #0d6efd;
-    --fuente-principal: 'Montserrat', sans-serif;
+  --color-fondo: #609599;
+  --color-blanco: #fff;
+  --color-primario: #0d6efd;
+  --fuente-principal: 'Montserrat', sans-serif;
 }
 
 body {
-    font-family: var(--fuente-principal);
-    background-color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
 }
 
-/*  Transiciones  */
-.btn, .nav-link, .card {
-    transition: all 0.3s ease-in-out;
+/* --- TRANSICIONES --- */
+.btn,
+.nav-link,
+.card {
+  transition: all 0.3s ease-in-out;
 }
 
-/* - Componentes - */
+/* --- COMPONENTES  --- */
 
 /* Contenedor Principal */
 .contenedor-principal {
-    background-color: var(--color-blanco);
-    border-radius: 2rem;
-    padding: 2rem;
-    border: 3px solid rgba(13, 110, 253, 0.2);
+  background-color: var(--color-blanco);
+  border: 3px solid rgb(13 110 253 / 20%);
+  border-radius: 2rem;
+  padding: 2rem;
 }
 
 /* Tarjetas */
 .tarjeta-pasion {
-    border: 2px solid #333 !important;
+  border: 2px solid #333 !important;
 }
 
 .tarjeta-pasion:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+  box-shadow: 0 15px 30px rgb(0 0 0 / 20%) !important;
+  transform: translateY(-10px);
 }
 
-/* -- queries para cada disp-- */
+/* --- MEDIA QUERIES  --- */
 
-/* Mobile (< 768px) */
-@media (max-width: 767.98px) {
-    .contenedor-principal {
-        padding: 1rem;
-        margin: 1rem;
-    }
-    .display-5 {
-        font-size: 1.8rem;
-    }
+/* Mobile */
+@media (width < 768px) {
+  .contenedor-principal {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .display-5 {
+    font-size: 1.8rem;
+  }
 }
 
-/* Desktop (>= 768px) */
-@media (min-width: 768px) {
-    .contenedor-principal {
-        padding: 3rem;
-        margin-top: 2rem;
-    }
+/* Desktop */
+@media (width >= 768px) {
+  .contenedor-principal {
+    margin-top: 2rem;
+    padding: 3rem;
+  }
 }
 
-/* --- validacion visual - verde - rojo --- */
-input:valid, textarea:valid {
-    border-color: #198754 !important;
+/* --- VALIDACIÓN VISUAL --- */
+input:valid,
+textarea:valid {
+  border-color: #198754 !important;
 }
 
-input:invalid:not(:placeholder-shown), 
+input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
-    border-color: #dc3545 !important;
+  border-color: #dc3545 !important;
 }
+
+/*valide con la pagina de CSS y me daba ok, pero después me volvio a dar error*/
