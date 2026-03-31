@@ -4,58 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Blog Personal</title>
-    <!-- Bootstrap 5 CDN -->
+    <link rel="icon" type="image/png" href="assets/images/favi.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS personalizado -->
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar (COMPLETAR: agregar logo, links activos, menú colapsable) -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Mi Blog</a>
-            <!-- TODO: agregar toggler y nav-items -->
+    
+   <!-- Nav en el que hay 3 botones y nos llevan a las diferentes secciones -->
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Fabri Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Hero section -->
-    <header class="bg-gradient text-white py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Bienvenido a Mi Blog</h1>
-            <p class="lead">Historias, tecnología y reflexiones</p>
+    <!-- Cartel bienvenida -->
+   <header class="bg-dark text-white py-4 shadow-lg" style="background-image: linear-gradient(rgba(17, 90, 84, 0.6), rgba(35, 39, 38, 0.8)), url('assets/images/F1.jpg'); background-size: cover; background-position: center;">
+    <div class="container text-center py-4">
+        <h1 class="display-3 fw-bold mb-3 text-warning">Bienvenido a Mi Blog</h1>
+        <p class="lead fs-4 opacity-75">Historias sobre Caminatas, Autos, Comida</p>
+        <div class="mt-4">
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Main: listado de artículos -->
-    <main class="py-5">
-        <div class="container">
-            <h2 class="mb-4">Artículos Recientes</h2>
-
-            <!-- Grid de tarjetas (COMPLETAR: 3+ artículos) -->
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="assets/images/article-1.jpg" class="card-img-top" alt="Artículo 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Primer Artículo</h5>
-                            <p class="card-text text-muted">Autor: Tu Nombre</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
-                        </div>
+    <!-- Tarjetas (3) -->
+<main class="py-5" style="background-color: #609599;"> 
+    <div class="container bg-white p-5 rounded-5 shadow-lg border border-3 border-primary-subtle"> 
+        <h2 class="display-5 fw-bold text-center mb-5 text-primary">Mis Pasiones</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-secondary border-2">
+                    <img src="assets/images/Olivia.jpg" class="card-img-top" alt="Caminata en la montaña">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5 fw-bold text-primary">Caminatas</h3>
+                        <p class="card-text text-muted small mb-2">Autor: Fabri</p>
+                        <p class="card-text flex-grow-1">Caminatas y senderismo en la naturaleza.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Leer más</a>
                     </div>
                 </div>
-                <!-- TODO: agregar 2 más -->
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-secondary border-2">
+                    <img src="assets/images/Pastel.jpg" class="card-img-top" alt="Plato de comida">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5 fw-bold text-primary">Comidas Favoritas</h3>
+                        <p class="card-text text-muted small mb-2">Autor: Fabri</p>
+                        <p class="card-text flex-grow-1">Me encanta comer, algunas de mis comidas favoritas.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-secondary border-1">
+                    <img src="assets/images/Corvette.jpg" class="card-img-top" alt="Auto deportivo">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5 fw-bold text-primary">Autitos</h3>
+                        <p class="card-text text-muted small mb-2">Autor: Fabri</p>
+                        <p class="card-text flex-grow-1">Me encanta el automovilismo, mi marca favorita es Chevrolet.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Leer más</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2026 Mi Blog. Todos los derechos reservados.</p>
-            <!-- TODO: agregar redes sociales -->
+    <!-- Footer + Redes (iconos) -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2026 Fabri Blog - UNTDF</p>
+        <div class="mt-3">
+            <a href="https://instagram.com/vd_fabri" target="_blank" class="text-white me-4 text-decoration-none">
+                <i class="fab fa-instagram fa-lg"></i> Instagram
+            </a>
+            <a href="https://github.com/Farvi-1986" target="_blank" class="text-white text-decoration-none">
+                <i class="fab fa-github fa-lg"></i> GitHub
+            </a>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
