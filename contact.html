@@ -26,60 +26,56 @@
         </div>
     </nav>
 
-    
-    <!-- Formulario de contacto -->
-    <main class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
+     <!-- Campos para el formulario + feedback visual  + campos obligatorios-->
+ <main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="mb-4">Contactame</h1>
+            <h2 class="h5 mb-4">Envíame un mensaje si querés hablar de caminatas, comida, o autos</h2>
+            <form class="row g-3 needs-validation" novalidate id="contactForm">
+                
                 <div class="col-md-6">
-                    <h1 class="mb-4">Contacto</h1>
-
-                    <form id="contactForm" novalidate>
-                        <!-- Campo nombre (COMPLETAR: validación) -->
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre *</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                            <div class="invalid-feedback">
-                                Por favor ingresa tu nombre.
-                            </div>
-                        </div>
-
-                        <!-- Campo email (COMPLETAR) -->
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email *</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <div class="invalid-feedback">
-                                Por favor ingresa un email válido.
-                            </div>
-                        </div>
-
-                        <!-- Campo teléfono (COMPLETAR: opcional) -->
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="phone" name="phone">
-                        </div>
-
-                        <!-- Campo mensaje (COMPLETAR: minlength) -->
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje *</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required minlength="10"></textarea>
-                            <div class="invalid-feedback">
-                                El mensaje debe tener al menos 10 caracteres.
-                            </div>
-                        </div>
-
-                        <!-- Botón submit -->
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Enviar</button>
-                    </form>
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                    <div class="invalid-feedback">El nombre es obligatorio.</div>
                 </div>
-            </div>
+
+                <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" required>
+                    <div class="invalid-feedback">El apellido es obligatorio.</div>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+                    <div class="invalid-feedback">Poné un mail válido (que tenga @ y .com).</div>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="tel" class="form-label">Teléfono (Opcional)</label>
+                    <input type="tel" class="form-control" id="tel">
+                    <div class="valid-feedback">¡Gracias por dejar tu contacto!</div>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="mensaje" class="form-label">Tu Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                    <div class="invalid-feedback">No podés enviar un mensaje vacío.</div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
+                </div>
+            </form>
         </div>
-    </main>
+    </div>
+</main>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
-            <p>&copy; 2026 Mi Blog.</p>
+            <p>&copy; 2026 Fabri Blog.</p>
         </div>
     </footer>
 
@@ -96,5 +92,22 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Código estándar de Bootstrap para activar las validaciones
+    (function () {
+      'use strict'
+      var forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+</script>
 </body>
 </html>
