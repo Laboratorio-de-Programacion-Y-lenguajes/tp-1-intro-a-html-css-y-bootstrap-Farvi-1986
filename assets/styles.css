@@ -1,213 +1,68 @@
-/* ===== Variables CSS ===== */
+/* Config  */
 :root {
-    --primary-color: #0d6efd;
-    --text-color: #212529;
-    --light-bg: #f8f9fa;
-    --border-color: #dee2e6;
-}
-
-/* ===== Reset y base ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    --color-fondo: #609599;
+    --color-blanco: #ffffff;
+    --color-primario: #0d6efd;
+    --fuente-principal: 'Montserrat', sans-serif;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
 }
 
-/* ===== Tipografía ===== */
-h1, h2, h3 {
-    font-weight: 600;
-    margin-bottom: 1rem;
+/*  Transiciones  */
+.btn, .nav-link, .card {
+    transition: all 0.3s ease-in-out;
 }
 
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
+/* - Componentes - */
+
+/* Contenedor Principal */
+.contenedor-principal {
+    background-color: var(--color-blanco);
+    border-radius: 2rem;
+    padding: 2rem;
+    border: 3px solid rgba(13, 110, 253, 0.2);
 }
 
-/* ===== Navbar ===== */
-.navbar {
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+/* Tarjetas */
+.tarjeta-pasion {
+    border: 2px solid #333 !important;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
+.tarjeta-pasion:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
 }
 
-.navbar-brand:hover {
-    opacity: 0.8;
-}
+/* -- queries para cada disp-- */
 
-/* ===== Hero Section ===== */
-.bg-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* ===== Cards ===== */
-.card {
-    border: none;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgb(0 0 0 / 15%) !important;
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-/* ===== Botones ===== */
-.btn {
-    border-radius: 6px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0b5ed7;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgb(13 110 253 / 30%);
-}
-
-/* ===== Formulario ===== */
-.form-control {
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 0.75rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgb(13 110 253 / 25%);
-}
-
-/* Validación HTML5: estilos :valid e :invalid */
-.form-control:valid {
-    border-color: #198754;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M.5 4.5L2 3l1-1 1 1 2-2 1 1-3 3-1 1-1-1-1-1z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-    padding-right: calc(1.5em + 0.75rem);
-}
-
-.form-control:invalid {
-    border-color: #dc3545;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.9h-.4z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-    padding-right: calc(1.5em + 0.75rem);
-}
-
-.invalid-feedback {
-    display: none;
-    width: 100%;
-    margin-top: 0.25rem;
-    font-size: 0.875em;
-    color: #dc3545;
-}
-
-.was-validated .form-control:invalid ~ .invalid-feedback {
-    display: block;
-}
-
-/* ===== Footer ===== */
-footer {
-    margin-top: auto;
-    border-top: 1px solid var(--border-color);
-}
-
-footer a {
-    color: #adb5bd;
-}
-
-/* ===== Accesibilidad ===== */
-a:focus,
-button:focus,
-input:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-footer a:hover {
-    color: white;
-}
-
-/* ===== Responsive ===== */
-@media (width <= 768px) {
-    h1 {
-        font-size: 2rem;
+/* Mobile (< 768px) */
+@media (max-width: 767.98px) {
+    .contenedor-principal {
+        padding: 1rem;
+        margin: 1rem;
     }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .card {
-        margin-bottom: 1.5rem;
-    }
-
-    .btn-lg {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
+    .display-5 {
+        font-size: 1.8rem;
     }
 }
 
-/* Skip to main content link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--primary-color);
-    color: white;
-    padding: 8px;
-    text-decoration: none;
+/* Desktop (>= 768px) */
+@media (min-width: 768px) {
+    .contenedor-principal {
+        padding: 3rem;
+        margin-top: 2rem;
+    }
 }
 
-.skip-link:focus {
-    top: 0;
+/* --- validacion visual - verde - rojo --- */
+input:valid, textarea:valid {
+    border-color: #198754 !important;
 }
 
-/* Validación visual sin JavaScript */
-
-/* Cuando el campo es inválido y el usuario está escribiendo */
 input:invalid:not(:placeholder-shown), 
 textarea:invalid:not(:placeholder-shown) {
-    border-color: #dc3545 !important; /* Rojo */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-}
-
-/* Cuando el campo es válido */
-input:valid, textarea:valid {
-    border-color: #198754 !important; /* Verde */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    border-color: #dc3545 !important;
 }
