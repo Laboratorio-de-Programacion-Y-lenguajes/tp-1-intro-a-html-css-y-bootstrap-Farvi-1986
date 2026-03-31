@@ -61,14 +61,13 @@ body {
 }
 
 /* --- VALIDACIÓN VISUAL --- */
+
 input:valid,
 textarea:valid {
   border-color: #198754 !important;
 }
 
-input:invalid:not(:placeholder-shown),
+input:invalid:not(:placeholder-shown), 
 textarea:invalid:not(:placeholder-shown) {
   border-color: #dc3545 !important;
 }
-
-/*valide con la pagina de CSS y me daba ok, pero después me volvio a dar error*/
