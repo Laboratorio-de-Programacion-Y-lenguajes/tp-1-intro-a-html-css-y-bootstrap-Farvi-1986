@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    
+    <!-- Marcador de navbar (con color cuando estás en esa parte)-->
    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">Fabri Blog</a>
@@ -25,31 +25,40 @@
         </div>
     </div>
 </nav>
-    <!-- Contenido -->
-    <main class="py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Sidebar: Avatar (COMPLETAR) -->
-                <aside class="col-md-3 mb-4">
-                    <img src="assets/images/avatar.jpg" class="img-fluid rounded-circle mb-3" alt="Avatar" style="max-width: 200px;">
-                    <h3>Tu Nombre</h3>
-                    <p class="text-muted">Desarrollador web &amp; escritor</p>
-                </aside>
 
-                <!-- Contenido principal (COMPLETAR) -->
-                <article class="col-md-9">
-                    <h1>Acerca de mí</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <!-- TODO: agregar más párrafos, habilidades, etc. -->
-                </article>
-            </div>
+
+    <!-- Foto + Contenido-->
+    <main class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="assets/images/avatar.jpeg" 
+                 alt="Foto de Fabrizio" 
+                 class="img-fluid rounded-circle shadow-lg border border-5 border-white">
         </div>
-    </main>
+
+        <div class="col-md-8">
+            <h1 class="display-4 fw-bold text-primary">Hola, soy Fabrizio</h1>
+            <p class="lead">Estudiante en la UNTDF</p>
+            <p>Analista Universitario En Sistemas / Licenciatura En Sistemas</p>
+            <hr class="my-4">
+            <p>Soy una persona capaz pero muy vaga. Actualmente estoy cursando la materia <strong>Laboratorio de Programación y Lenguajes</strong>, donde nos estan pidiendo como trabajo práctico una pagina de desarrollo web con HTML, CSS y Bootstrap.</p>
+            
+            <h2 class="h4 mt-4">Algunas cosas que me gustan hacer</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent">🏔️ <strong>Caminatas:</strong> Salir a caminar me despeja.</li>
+                <li class="list-group-item bg-transparent">🏎️ <strong>Autos:</strong> Me encantan los autos.</li>
+                <li class="list-group-item bg-transparent">🍳 <strong>Comida:</strong> Me encanta probar comida nueva.</li>
+                <li class="list-group-item bg-transparent">🎮 <strong>Jugar:</strong> Me gustan los shooters.</li>
+                <li class="list-group-item bg-transparent">📸 <strong>Fotografía:</strong> Me gusta sacar muchas fotos a todo lo que me llama la atencion.</li>
+            </ul>
+        </div>
+    </div>
+</main>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
-            <p>&copy; 2026 Mi Blog.</p>
+            <p>&copy; 2026 Fabri Blog.</p>
         </div>
     </footer>
 
